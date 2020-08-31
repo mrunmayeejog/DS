@@ -38,9 +38,8 @@ class Array_stack:
     def push(self, val):
         if self.is_full():
             return
-        if val:
-            self.top += 1
-            self.stack[self.top] = val
+        self.top += 1
+        self.stack[self.top] = val
 
     def pop(self):
         if self.is_empty():
@@ -53,14 +52,18 @@ class Array_stack:
     def print_stack(self):
         if not self.is_empty():
             for each in self.stack:
-                if each:
+                if not str(each) == 'None':
                     print((' ' + str(each)), end=' ')
 
         else:
             print('Stack is empty')
-
+        print("\n")
 
 if __name__ =="__main__":
     s = Array_stack()
     s.is_full()
+    s.push(0)
+    s.push(1)
+    s.push(0)
+    s.push(2)
     s.print_stack()

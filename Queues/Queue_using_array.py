@@ -1,8 +1,8 @@
 """
-Queues data structure that works in FIFO manner. Queue consists of standard APIs such as enqueue() to insert new data at the rear end and
-dequeue operation to remove from the front end. Queues can be implemented with arrays as well as linkedlists.
+Queues data structure that works in FIFO manner. Queue consists of standard APIs such as enqueue() to insert new data at
+the rear end and dequeue operation to remove from the front end. Queues can be implemented with arrays as well as linkedlists.
 In case of arrays, we use Array as an ADT and use append and delete functions.
-With Queues using linked lists we maintain anothe rpointer as tail which helps in inserting at tail/rear end and we delete at head.
+With Queues using linked lists we maintain another pointer as tail which helps in inserting at tail/rear end and we delete at head.
 """
 Max = 50
 

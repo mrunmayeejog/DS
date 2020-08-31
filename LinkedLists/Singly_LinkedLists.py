@@ -1,5 +1,5 @@
-
-"""A linked list is a linear data structure, in which the elements are not stored at contiguous memory locations.
+"""
+A linked list is a linear data structure, in which the elements are not stored at contiguous memory locations.
 In simple words, a linked list consists of nodes where each node contains a data field and a reference(link) to the next node in the list.
 Linkedlist APIs include
 - insert_node()
@@ -13,6 +13,7 @@ Linkedlist APIs include
 - print_reverse_list()
 - reverse_list()
 """
+
 
 class sll_node:
 
@@ -58,7 +59,7 @@ class singly_linked_list:
         newnode = sll_node(value)
         if pos == 0:
             newnode.next = self.head
-            self.head = new_node
+            self.head = newnode
         else:
             curr = self.head
             i = 1
@@ -74,7 +75,6 @@ class singly_linked_list:
             curr.next = newnode
             print('New value ' + str(value) + ' inserted at position ' + str(pos))
 
-
     def search_node_by_value(self, value):
         if not self.head:
             print('List is empty')
@@ -86,18 +86,16 @@ class singly_linked_list:
                 i += 1
                 print(curr.data)
                 if curr.data == value:
-                    print("Value found at position " +str(i))
+                    print("Value found at position " + str(i))
                     return
                 curr = curr.next
             print("\n Value not found")
-
 
     def delete_at_head(self):
         if not self.head:
             print('List is empty')
             return None
         self.head = self.head.next
-
 
     def delete_node_by_value(self, value):
         if not self.head:
